@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:school_management_system_admin/resources/routes/route_names.dart';
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
-import 'package:school_management_system_admin/resources/theme/app_pallete.dart';
 
 class LoginController extends GetxController {
   final TextEditingController usernameController = TextEditingController();

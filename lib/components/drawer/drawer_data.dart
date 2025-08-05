@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:school_management_system_admin/components/drawer/drawer_controller.dart'
-    as app;
 import 'package:school_management_system_admin/components/drawer/drawer_model.dart';
 import 'package:school_management_system_admin/resources/routes/route_names.dart';
 
@@ -11,12 +9,14 @@ class CustomDrawerData {
       title: "Dashboard",
       icon: Icons.dashboard,
       onTap: () {
-        Get.offAllNamed(RouteName.dashboardScreen);
+        if (Get.currentRoute != RouteName.dashboardScreen) {
+          Get.offAllNamed(RouteName.dashboardScreen);
+        }
       },
       isActive: false,
     ),
     DrawerModel(
-      title: "Profile",
+      title: "Students",
       icon: Icons.person,
       onTap: () {
         // Navigate to profile when implemented
@@ -24,18 +24,52 @@ class CustomDrawerData {
       isActive: false,
     ),
     DrawerModel(
-      title: "Settings",
-      icon: Icons.settings,
+      title: "Teacher",
+      icon: Icons.person,
       onTap: () {
         // Navigate to settings when implemented
       },
       isActive: false,
     ),
     DrawerModel(
-      title: "Logout",
-      icon: Icons.logout,
+      title: "Classes",
+      icon: Icons.person,
       onTap: () {
-        Get.find<app.CustomDrawerController>().logout();
+        // Navigate to settings when implemented
+      },
+
+      isActive: false,
+    ),
+    DrawerModel(
+      title: "Chats",
+      icon: Icons.menu_book,
+      onTap: () {
+        // Navigate to settings when implemented
+      },
+      isActive: false,
+    ),
+    DrawerModel(
+      title: "Attendance",
+      icon: Icons.person,
+      onTap: () {
+        // Navigate to settings when implemented
+      },
+      isActive: false,
+    ),
+
+    DrawerModel(
+      title: "Event & Notices",
+      icon: Icons.person,
+      onTap: () {
+        // Navigate to settings when implemented
+      },
+      isActive: false,
+    ),
+    DrawerModel(
+      title: "Fee Managemnt",
+      icon: Icons.person,
+      onTap: () {
+        // Navigate to settings when implemented
       },
       isActive: false,
     ),

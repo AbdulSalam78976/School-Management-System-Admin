@@ -3,18 +3,8 @@ import 'package:school_management_system_admin/components/drawer/drawer_model.da
 import 'package:school_management_system_admin/resources/routes/route_names.dart';
 
 class CustomDrawerController extends GetxController {
-  final RxString userName = ''.obs;
-  final RxString userProfileImage = ''.obs;
   final RxList<DrawerModel> items = <DrawerModel>[].obs;
   final RxInt activeIndex = 0.obs;
-
-  void setUserName(String name) {
-    userName.value = name;
-  }
-
-  void setUserProfileImage(String imagePath) {
-    userProfileImage.value = imagePath;
-  }
 
   void setItems(List<DrawerModel> drawerItems) {
     items.assignAll(drawerItems);

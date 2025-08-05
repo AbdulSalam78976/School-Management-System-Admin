@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       title: 'School Management System',
       theme: AppTheme,
       initialBinding: AppBinding(),
-      initialRoute: RouteName.loginScreen,
+      initialRoute: RouteName.dashboardScreen,
       getPages: AppRoutes.appRoutes(),
     );
   }

@@ -4,6 +4,8 @@ import 'package:school_management_system_admin/resources/theme/app_pallete.dart'
 final AppTheme = ThemeData(
   primaryColor: AppPallete.primaryColor,
   scaffoldBackgroundColor: AppPallete.backgroundColor,
+  splashColor: Colors.transparent,
+  highlightColor: Colors.transparent,
   colorScheme: ColorScheme.light(
     primary: AppPallete.primaryColor,
     secondary: AppPallete.secondaryColor,
@@ -61,7 +63,7 @@ final AppTheme = ThemeData(
       fontWeight: FontWeight.w600,
     ),
   ),
-  iconTheme: IconThemeData(color: AppPallete.primaryColor, size: 20),
+  iconTheme: IconThemeData(color: AppPallete.textPrimaryColor, size: 20),
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       backgroundColor: AppPallete.primaryColor,

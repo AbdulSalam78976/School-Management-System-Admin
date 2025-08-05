@@ -37,6 +37,8 @@ dependencies:
   get: ^4.6.5
   flutter_svg: ^2.0.9
   awesome_snackbar_content: ^0.1.7
+  google_fonts: 
+  intl:
 
 dev_dependencies:
   flutter_test:
