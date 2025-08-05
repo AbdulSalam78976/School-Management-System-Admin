@@ -33,7 +33,7 @@ class CustomDrawerData {
     ),
     DrawerModel(
       title: "Classes",
-      icon: Icons.person,
+      icon: Icons.book,
       onTap: () {
         // Navigate to settings when implemented
       },
@@ -42,7 +42,7 @@ class CustomDrawerData {
     ),
     DrawerModel(
       title: "Chats",
-      icon: Icons.menu_book,
+      icon: Icons.chat,
       onTap: () {
         // Navigate to settings when implemented
       },

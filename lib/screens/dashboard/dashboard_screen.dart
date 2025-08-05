@@ -6,6 +6,7 @@ import 'package:school_management_system_admin/components/drawer/drawer_controll
 import 'package:school_management_system_admin/components/drawer/drawer_data.dart';
 import 'package:school_management_system_admin/components/greeting/greeting_widget.dart';
 import 'package:school_management_system_admin/components/header/header.dart';
+import 'package:school_management_system_admin/components/performance/performance_bar_chart.dart';
 import 'package:school_management_system_admin/components/school%20details/cards_widget.dart';
 import 'package:school_management_system_admin/resources/theme/app_pallete.dart';
 import 'package:school_management_system_admin/utils/responsive.dart';
@@ -51,6 +52,22 @@ class Dashboard extends StatelessWidget {
                     SchoolDetailsCard(),
                     const SizedBox(height: 18),
                     QuickActions(),
+                    const SizedBox(height: 18),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          "Performance Overview",
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: AppPallete.textPrimaryColor,
+                          ),
+                        ),
+                        const SizedBox(height: 16),
+                        Row(children: [PerformanceBarChart()]),
+                      ],
+                    ),
                   ],
                 ),
               ),

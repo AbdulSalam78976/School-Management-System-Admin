@@ -20,9 +20,10 @@ class CustomDrawer extends StatelessWidget {
               padding: const EdgeInsets.only(top: 24, bottom: 16),
               child: Column(
                 children: [
-                  Image.asset(
-                    'assets/images/logo.png', // Replace with your logo asset path
-                    height: 80,
+                  CircleAvatar(
+                    radius: 80,
+                    backgroundColor: Colors.white,
+                    backgroundImage: const AssetImage('assets/images/logo.png'),
                   ),
                   const SizedBox(height: 8),
                   Text(

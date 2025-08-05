@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:school_management_system_admin/components/custom_card_widget.dart';
 import 'package:school_management_system_admin/components/school%20details/school_details_controller.dart';
-import 'package:school_management_system_admin/utils/responsive.dart';
 
 class SchoolDetailsCard extends StatelessWidget {
   const SchoolDetailsCard({super.key});
