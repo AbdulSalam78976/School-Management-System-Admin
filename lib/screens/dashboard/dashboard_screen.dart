@@ -32,7 +32,7 @@ class Dashboard extends StatelessWidget {
       //         child: const SummaryWidget(),
       //       )
       //     : null,
-      backgroundColor: AppPallete.backgroundColor,
+      backgroundColor: AppPalette.backgroundColor,
       body: SafeArea(
         child: Row(
           children: [
@@ -61,7 +61,7 @@ class Dashboard extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
-                            color: AppPallete.textPrimaryColor,
+                            color: AppPalette.textPrimaryColor,
                           ),
                         ),
                         const SizedBox(height: 16),

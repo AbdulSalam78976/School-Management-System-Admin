@@ -31,7 +31,7 @@ class CustomDrawer extends StatelessWidget {
                     style: GoogleFonts.nunito(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
-                      color: AppPallete.primaryColor,
+                      color: AppPalette.primaryColor,
                     ),
                   ),
                 ],
@@ -60,19 +60,14 @@ class CustomDrawer extends StatelessWidget {
                       ),
                       decoration: BoxDecoration(
                         color: isActive
-                            ? AppPallete.primaryColor
+                            ? AppPalette.primaryColor
                             : Colors.transparent,
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Row(
                         children: [
-                          Icon(
-                            item.icon,
-                            color: isActive
-                                ? Colors.white
-                                : AppPallete.textPrimaryColor,
-                            size: 24,
-                          ),
+                          Image.asset(item.icon, width: 30, height: 30),
+
                           const SizedBox(width: 12),
                           Text(
                             item.title,
@@ -101,7 +96,7 @@ class CustomDrawer extends StatelessWidget {
                     vertical: 12,
                   ),
                   decoration: BoxDecoration(
-                    color: AppPallete.errorColor,
+                    color: AppPalette.errorColor,
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Row(

@@ -18,7 +18,7 @@ class PerformanceBarChart extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: Obx(
               () => DropdownButton<String>(
-                dropdownColor: AppPallete.textDisabledColor,
+                dropdownColor: AppPalette.textDisabledColor,
                 value: controller.chartType.value,
                 onChanged: (value) {
                   controller.setChartType(value!);
@@ -30,7 +30,7 @@ class PerformanceBarChart extends StatelessWidget {
                         child: Text(
                           'Performance by $type',
                           style: const TextStyle(
-                            color: AppPallete.textPrimaryColor,
+                            color: AppPalette.textPrimaryColor,
                           ),
                         ),
                       ),
@@ -55,7 +55,7 @@ class PerformanceBarChart extends StatelessWidget {
                     minY: 0,
                     barTouchData: BarTouchData(
                       touchTooltipData: BarTouchTooltipData(
-                        tooltipBgColor: AppPallete.surfaceColor,
+                        tooltipBgColor: AppPalette.surfaceColor,
                         getTooltipItem: (group, groupIndex, rod, rodIndex) {
                           return BarTooltipItem(
                             '${controller.labels[groupIndex]}\n',
@@ -64,7 +64,7 @@ class PerformanceBarChart extends StatelessWidget {
                               TextSpan(
                                 text: '${rod.toY.round()}%',
                                 style: const TextStyle(
-                                  color: AppPallete.primaryColor,
+                                  color: AppPalette.primaryColor,
                                 ),
                               ),
                             ],
@@ -86,7 +86,7 @@ class PerformanceBarChart extends StatelessWidget {
                               return Text(
                                 '${value.toInt()}',
                                 style: const TextStyle(
-                                  color: AppPallete.textPrimaryColor,
+                                  color: AppPalette.textPrimaryColor,
                                   fontWeight: FontWeight.bold,
                                   fontSize: 12,
                                 ),
@@ -109,7 +109,7 @@ class PerformanceBarChart extends StatelessWidget {
                             return Text(
                               controller.labels[value.toInt()],
                               style: const TextStyle(
-                                color: AppPallete.textPrimaryColor,
+                                color: AppPalette.textPrimaryColor,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 12,
                               ),
@@ -124,11 +124,11 @@ class PerformanceBarChart extends StatelessWidget {
                       show: true,
                       border: const Border(
                         left: BorderSide(
-                          color: AppPallete.textPrimaryColor,
+                          color: AppPalette.textPrimaryColor,
                           width: 1,
                         ),
                         bottom: BorderSide(
-                          color: AppPallete.textPrimaryColor,
+                          color: AppPalette.textPrimaryColor,
                           width: 1,
                         ),
                         right: BorderSide.none,

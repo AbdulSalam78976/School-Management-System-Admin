@@ -14,7 +14,7 @@ class LoginScreen extends StatelessWidget {
     final isDesktop = Responsive.isDesktop(context);
     final size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: AppPallete.containerColor,
+      backgroundColor: AppPalette.containerColor,
       body: Row(
         children: [
           // Left side - Illustration (visible on desktop and tablet)
@@ -22,7 +22,7 @@ class LoginScreen extends StatelessWidget {
             Expanded(
               flex: isDesktop ? 6 : 5,
               child: Container(
-                color: AppPallete.containerColor,
+                color: AppPalette.containerColor,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -37,7 +37,7 @@ class LoginScreen extends StatelessWidget {
                       style: TextStyle(
                         fontSize: isDesktop ? 28 : 24,
                         fontWeight: FontWeight.bold,
-                        color: AppPallete.primaryColor,
+                        color: AppPalette.primaryColor,
                       ),
                     ),
                     const SizedBox(height: 10),
@@ -46,7 +46,7 @@ class LoginScreen extends StatelessWidget {
                       style: TextStyle(
                         fontSize: isDesktop ? 22 : 18,
                         fontWeight: FontWeight.w500,
-                        color: AppPallete.textPrimaryColor,
+                        color: AppPalette.textPrimaryColor,
                       ),
                     ),
                   ],
@@ -61,8 +61,8 @@ class LoginScreen extends StatelessWidget {
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
-                    AppPallete.backgroundColor,
-                    AppPallete.containerColor,
+                    AppPalette.backgroundColor,
+                    AppPalette.containerColor,
                   ],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
@@ -94,7 +94,7 @@ class LoginScreen extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 24,
                               fontWeight: FontWeight.bold,
-                              color: AppPallete.textPrimaryColor,
+                              color: AppPalette.textPrimaryColor,
                             ),
                           ),
                           const SizedBox(height: 8),
@@ -102,7 +102,7 @@ class LoginScreen extends StatelessWidget {
                             "Admin Portal",
                             style: TextStyle(
                               fontSize: 16,
-                              color: AppPallete.textSecondaryColor,
+                              color: AppPalette.textSecondaryColor,
                             ),
                           ),
                           const SizedBox(height: 32),
@@ -119,7 +119,7 @@ class LoginScreen extends StatelessWidget {
                                   style: TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.w500,
-                                    color: AppPallete.textPrimaryColor,
+                                    color: AppPalette.textPrimaryColor,
                                   ),
                                 ),
                                 const SizedBox(height: 8),
@@ -138,6 +138,7 @@ class LoginScreen extends StatelessWidget {
                                   style: TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.w500,
+                                    color: AppPalette.textPrimaryColor,
                                   ),
                                 ),
                                 const SizedBox(height: 8),
@@ -152,7 +153,7 @@ class LoginScreen extends StatelessWidget {
                                         controller.isObscure.value
                                             ? Icons.visibility
                                             : Icons.visibility_off,
-                                        color: AppPallete.textPrimaryColor,
+                                        color: AppPalette.textPrimaryColor,
                                         size: 20,
                                       ),
                                       onPressed:
@@ -170,7 +171,7 @@ class LoginScreen extends StatelessWidget {
                                     child: Text(
                                       'Forgot Password?',
                                       style: TextStyle(
-                                        color: AppPallete.primaryColor,
+                                        color: AppPalette.primaryColor,
                                         fontWeight: FontWeight.w500,
                                         fontSize: 14,
                                       ),
@@ -189,12 +190,12 @@ class LoginScreen extends StatelessWidget {
                                         ? null
                                         : controller.login,
                                     style: ElevatedButton.styleFrom(
-                                      backgroundColor: AppPallete.primaryColor,
+                                      backgroundColor: AppPalette.primaryColor,
                                       foregroundColor: Colors.white,
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(8),
                                       ),
-                                      disabledBackgroundColor: AppPallete
+                                      disabledBackgroundColor: AppPalette
                                           .primaryColor
                                           .withOpacity(0.6),
                                     ),
@@ -203,7 +204,7 @@ class LoginScreen extends StatelessWidget {
                                             height: 20,
                                             width: 20,
                                             child: CircularProgressIndicator(
-                                              color: AppPallete.primaryColor,
+                                              color: AppPalette.primaryColor,
                                               strokeWidth: 2,
                                             ),
                                           )

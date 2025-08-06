@@ -15,7 +15,7 @@ class QuickActions extends StatelessWidget {
           style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
-            color: AppPallete.textPrimaryColor,
+            color: AppPalette.textPrimaryColor,
           ),
         ),
         const SizedBox(height: 16),

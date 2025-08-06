@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'School Management System',
-      theme: AppTheme,
+      theme: AppTheme.darkTheme,
       initialBinding: AppBinding(),
       initialRoute: RouteName.dashboardScreen,
       getPages: AppRoutes.appRoutes(),

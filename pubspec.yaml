@@ -40,6 +40,7 @@ dependencies:
   google_fonts:
   fl_chart: ^0.64.0 
   intl:
+  image_picker: ^1.1.2
 
 dev_dependencies:
   flutter_test:

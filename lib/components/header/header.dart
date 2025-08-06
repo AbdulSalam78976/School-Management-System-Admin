@@ -18,10 +18,10 @@ class HeaderWidget extends StatelessWidget {
           },
           child: CircleAvatar(
             radius: 20,
-            backgroundColor: AppPallete.containerColor,
+            backgroundColor: AppPalette.containerColor,
             child: IconButton(
               icon: const Icon(Icons.notifications_none),
-              color: AppPallete.textPrimaryColor,
+              color: AppPalette.textPrimaryColor,
               iconSize: 20,
               onPressed: () {
                 // Handle notification tap

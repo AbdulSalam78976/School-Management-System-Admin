@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:school_management_system_admin/components/drawer/drawer_model.dart';
 import 'package:school_management_system_admin/resources/routes/route_names.dart';
@@ -7,7 +6,7 @@ class CustomDrawerData {
   List<DrawerModel> sideMenuItems = [
     DrawerModel(
       title: "Dashboard",
-      icon: Icons.dashboard,
+      icon: "assets/images/dashboard.png",
       onTap: () {
         if (Get.currentRoute != RouteName.dashboardScreen) {
           Get.offAllNamed(RouteName.dashboardScreen);
@@ -17,15 +16,15 @@ class CustomDrawerData {
     ),
     DrawerModel(
       title: "Students",
-      icon: Icons.person,
+      icon: "assets/images/students.png",
       onTap: () {
-        // Navigate to profile when implemented
+        Get.toNamed(RouteName.studentManagementScreen);
       },
       isActive: false,
     ),
     DrawerModel(
       title: "Teacher",
-      icon: Icons.person,
+      icon: "assets/images/teacher.png",
       onTap: () {
         // Navigate to settings when implemented
       },
@@ -33,7 +32,7 @@ class CustomDrawerData {
     ),
     DrawerModel(
       title: "Classes",
-      icon: Icons.book,
+      icon: "assets/images/classes.png",
       onTap: () {
         // Navigate to settings when implemented
       },
@@ -42,15 +41,7 @@ class CustomDrawerData {
     ),
     DrawerModel(
       title: "Chats",
-      icon: Icons.chat,
-      onTap: () {
-        // Navigate to settings when implemented
-      },
-      isActive: false,
-    ),
-    DrawerModel(
-      title: "Attendance",
-      icon: Icons.person,
+      icon: "assets/images/chat.png",
       onTap: () {
         // Navigate to settings when implemented
       },
@@ -59,15 +50,15 @@ class CustomDrawerData {
 
     DrawerModel(
       title: "Event & Notices",
-      icon: Icons.person,
+      icon: "assets/images/megaphone.png",
       onTap: () {
-        // Navigate to settings when implemented
+        Get.toNamed(RouteName.announcementsScreen);
       },
       isActive: false,
     ),
     DrawerModel(
       title: "Fee Managemnt",
-      icon: Icons.person,
+      icon: "assets/images/fees.png",
       onTap: () {
         // Navigate to settings when implemented
       },

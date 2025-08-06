@@ -16,7 +16,7 @@ class CustomCardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: color ?? AppPallete.containerColor,
+        color: color ?? AppPalette.containerColor,
         borderRadius: BorderRadius.circular(8),
       ),
       child: Padding(

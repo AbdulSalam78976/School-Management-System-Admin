@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class DrawerModel {
-  final IconData icon;
+  final String icon; // Image path
   final String title;
   final VoidCallback onTap;
   final bool isActive;
@@ -14,7 +14,7 @@ class DrawerModel {
   });
 
   DrawerModel copyWith({
-    IconData? icon,
+    String? icon, // ✅ Correct type
     String? title,
     VoidCallback? onTap,
     bool? isActive,

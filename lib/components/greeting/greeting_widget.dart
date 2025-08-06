@@ -28,7 +28,7 @@ class WelcomeCard extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
-                    color: AppPallete.textPrimaryColor,
+                    color: AppPalette.textPrimaryColor,
                   ),
                 ),
                 const SizedBox(height: 8),
@@ -36,7 +36,7 @@ class WelcomeCard extends StatelessWidget {
                   "Welcome to the School Admin Dashboard",
                   style: TextStyle(
                     fontSize: 16,
-                    color: AppPallete.textSecondaryColor,
+                    color: AppPalette.textSecondaryColor,
                   ),
                 ),
               ],
@@ -53,7 +53,7 @@ class WelcomeCard extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
-                    color: AppPallete.primaryColor,
+                    color: AppPalette.primaryColor,
                   ),
                 ),
                 const SizedBox(height: 4),
@@ -61,7 +61,7 @@ class WelcomeCard extends StatelessWidget {
                   date,
                   style: TextStyle(
                     fontSize: 14,
-                    color: AppPallete.textSecondaryColor,
+                    color: AppPalette.textSecondaryColor,
                   ),
                 ),
               ],
