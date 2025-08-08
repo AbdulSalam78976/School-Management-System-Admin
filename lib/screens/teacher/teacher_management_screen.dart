@@ -2,283 +2,126 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:school_management_system_admin/resources/routes/route_names.dart';
 import 'package:school_management_system_admin/resources/theme/app_pallete.dart';
-import 'package:school_management_system_admin/screens/student/add_student.dart';
-import 'package:school_management_system_admin/screens/student/student_model.dart';
+import 'package:school_management_system_admin/screens/teacher/add_teacher.dart';
+import 'package:school_management_system_admin/screens/teacher/teacher_model.dart';
 
-class StudentManagementScreen extends StatefulWidget {
-  const StudentManagementScreen({super.key});
+class TeacherManagementScreen extends StatefulWidget {
+  const TeacherManagementScreen({super.key});
 
   @override
-  State<StudentManagementScreen> createState() =>
-      _StudentManagementScreenState();
+  State<TeacherManagementScreen> createState() =>
+      _TeacherManagementScreenState();
 }
 
-class _StudentManagementScreenState extends State<StudentManagementScreen> {
+class _TeacherManagementScreenState extends State<TeacherManagementScreen> {
   final TextEditingController _searchController = TextEditingController();
-  List<Student> students = [
-    Student(
-      id: '2023001',
-      name: 'Sophia Chen',
-      grade: 'Grade 10',
-      email: 'sophia.chen@email.com',
-      gender: 'Female',
+  List<Teacher> teachers = [
+    Teacher(
+      id: 'T1001',
+      name: 'Ms. Emily Carter',
+      subject: 'Mathematics',
+      email: 'emily.carter@email.com',
     ),
-    Student(
-      id: '2023002',
-      name: 'Ethan Morales',
-      grade: 'Grade 11',
-      email: 'ethan.morales@gmail.com',
-      gender: 'Male',
+    Teacher(
+      id: 'T1002',
+      name: 'Mr. David Lee',
+      subject: 'Science',
+      email: 'david.lee@gmail.com',
     ),
-    Student(
-      id: '2023003',
-      name: 'Olivia Johnson',
-      grade: 'Grade 9',
-      email: 'olivia.johnson@gmail.com',
-      gender: 'Female',
+    Teacher(
+      id: 'T1003',
+      name: 'Ms. Sarah Johnson',
+      subject: 'English',
+      email: 'sarah.johnson@gmail.com',
     ),
-    Student(
-      id: '2023004',
-      name: 'Liam Patel',
-      grade: 'Grade 12',
-      email: 'liam.patel@gmail.com',
-      gender: 'Male',
+    Teacher(
+      id: 'T1004',
+      name: 'Mr. Michael Brown',
+      subject: 'History',
+      email: 'michael.brown@gmail.com',
     ),
-    Student(
-      id: '2023005',
-      name: 'Ava Kim',
-      grade: 'Grade 10',
-      email: 'ava.kim@gmail.com',
-      gender: 'Female',
+    Teacher(
+      id: 'T1005',
+      name: 'Ms. Jessica Davis',
+      subject: 'Art',
+      email: 'jessica.davis@gmail.com',
     ),
-    Student(
-      id: '2023006',
-      name: 'Noah González',
-      grade: 'Grade 11',
-      email: 'noah.gonzalez@gmail.com',
-      gender: 'Male',
+    Teacher(
+      id: 'T1006',
+      name: 'Mr. Robert Wilson',
+      subject: 'Physical Education',
+      email: 'robert.wilson@gmail.com',
     ),
-    Student(
-      id: '2023007',
-      name: 'Isabella Smith',
-      grade: 'Grade 9',
-      email: 'isabella.smith@gmail.com',
-      gender: 'Female',
+    Teacher(
+      id: 'T1007',
+      name: 'Ms. Olivia Taylor',
+      subject: 'Music',
+      email: 'olivia.taylor@gmail.com',
     ),
-    Student(
-      id: '2023008',
-      name: 'Jackson Williams',
-      grade: 'Grade 12',
-      email: 'jackson.williams@gmail.com',
-      gender: 'Male',
+    Teacher(
+      id: 'T1008',
+      name: 'Mr. Ethan Clark',
+      subject: 'Computer Science',
+      email: 'ethan.clark@email.com',
     ),
-    Student(
-      id: '2023009',
-      name: 'Mia Rodriguez',
-      grade: 'Grade 10',
-      email: 'mia.rodriguez@email.com',
-      gender: 'Female',
+    Teacher(
+      id: 'T1009',
+      name: 'Ms. Sophia Lewis',
+      subject: 'Foreign Languages',
+      email: 'sophia.lewis@gmail.com',
     ),
-    Student(
-      id: '2023010',
-      name: 'Lucas Brown',
-      grade: 'Grade 11',
-      email: 'lucas.brown@gmail.com',
-      gender: 'Male',
-    ),
-    Student(
-      id: '2023011',
-      name: 'Emma Nguyen',
-      grade: 'Grade 9',
-      email: 'emma.nguyen@email.com',
-      gender: 'Female',
-    ),
-    Student(
-      id: '2023012',
-      name: 'Aiden Garcia',
-      grade: 'Grade 10',
-      email: 'aiden.garcia@gmail.com',
-      gender: 'Male',
-    ),
-    Student(
-      id: '2023013',
-      name: 'Charlotte Wilson',
-      grade: 'Grade 11',
-      email: 'charlotte.wilson@gmail.com',
-      gender: 'Female',
-    ),
-    Student(
-      id: '2023014',
-      name: 'James Martinez',
-      grade: 'Grade 12',
-      email: 'james.martinez@gmail.com',
-      gender: 'Male',
-    ),
-    Student(
-      id: '2023015',
-      name: 'Amelia Anderson',
-      grade: 'Grade 9',
-      email: 'amelia.anderson@gmail.com',
-      gender: 'Female',
-    ),
-    Student(
-      id: '2023016',
-      name: 'Benjamin Taylor',
-      grade: 'Grade 10',
-      email: 'benjamin.taylor@gmail.com',
-      gender: 'Male',
-    ),
-    Student(
-      id: '2023017',
-      name: 'Harper Thomas',
-      grade: 'Grade 11',
-      email: 'harper.thomas@gmail.com',
-      gender: 'Female',
-    ),
-    Student(
-      id: '2023018',
-      name: 'Mason Hernandez',
-      grade: 'Grade 12',
-      email: 'mason.hernandez@gmail.com',
-      gender: 'Male',
-    ),
-    Student(
-      id: '2023019',
-      name: 'Evelyn Lee',
-      grade: 'Grade 9',
-      email: 'evelyn.lee@email.com',
-      gender: 'Female',
-    ),
-    Student(
-      id: '2023020',
-      name: 'Elijah Walker',
-      grade: 'Grade 10',
-      email: 'elijah.walker@gmail.com',
-      gender: 'Male',
-    ),
-    Student(
-      id: '2023021',
-      name: 'Abigail Perez',
-      grade: 'Grade 11',
-      email: 'abigail.perez@gmail.com',
-      gender: 'Female',
-    ),
-    Student(
-      id: '2023022',
-      name: 'Logan Hall',
-      grade: 'Grade 12',
-      email: 'logan.hall@gmail.com',
-      gender: 'Male',
-    ),
-    Student(
-      id: '2023023',
-      name: 'Emily Young',
-      grade: 'Grade 9',
-      email: 'emily.young@gmail.com',
-      gender: 'Female',
-    ),
-    Student(
-      id: '2023024',
-      name: 'Alexander Allen',
-      grade: 'Grade 10',
-      email: 'alexander.allen@gmail.com',
-      gender: 'Male',
-    ),
-    Student(
-      id: '2023025',
-      name: 'Elizabeth King',
-      grade: 'Grade 11',
-      email: 'elizabeth.king@gmail.com',
-      gender: 'Female',
-    ),
-    Student(
-      id: '2023026',
-      name: 'Daniel Wright',
-      grade: 'Grade 12',
-      email: 'daniel.wright@gmail.com',
-      gender: 'Male',
-    ),
-    Student(
-      id: '2023027',
-      name: 'Sofia Lopez',
-      grade: 'Grade 9',
-      email: 'sofia.lopez@email.com',
-      gender: 'Female',
-    ),
-    Student(
-      id: '2023028',
-      name: 'Matthew Scott',
-      grade: 'Grade 10',
-      email: 'matthew.scott@gmail.com',
-      gender: 'Male',
-    ),
-    Student(
-      id: '2023029',
-      name: 'Avery Green',
-      grade: 'Grade 11',
-      email: 'avery.green@gmail.com',
-      gender: 'Female',
-    ),
-    Student(
-      id: '2023030',
-      name: 'David Adams',
-      grade: 'Grade 12',
-      email: 'david.adams@gmail.com',
-      gender: 'Male',
+    Teacher(
+      id: 'T1010',
+      name: 'Mr. Daniel Walker',
+      subject: 'Social Studies',
+      email: 'daniel.walker@email.com',
     ),
   ];
 
-  List<Student> filteredStudents = [];
-  String? selectedGender;
-  String? selectedGrade;
+  List<Teacher> filteredTeachers = [];
+  String? selectedSubject;
   bool filtersActive = false;
 
   @override
   void initState() {
     super.initState();
-    filteredStudents = students;
-    _searchController.addListener(_filterStudents);
+    filteredTeachers = teachers;
+    _searchController.addListener(_filterTeachers);
   }
 
-  void _filterStudents() {
+  void _filterTeachers() {
     final query = _searchController.text.toLowerCase();
     setState(() {
-      filteredStudents = students.where((student) {
+      filteredTeachers = teachers.where((teacher) {
         final matchesSearch =
-            student.name.toLowerCase().contains(query) ||
-            student.id.toLowerCase().contains(query) ||
-            student.grade.toLowerCase().contains(query) ||
-            student.email.toLowerCase().contains(query);
+            teacher.name.toLowerCase().contains(query) ||
+            teacher.id.toLowerCase().contains(query) ||
+            teacher.subject.toLowerCase().contains(query) ||
+            teacher.email.toLowerCase().contains(query);
 
-        final matchesGender =
-            selectedGender == null ||
-            student.gender.toLowerCase() == selectedGender!.toLowerCase();
+        final matchesSubject =
+            selectedSubject == null ||
+            teacher.subject.toLowerCase() == selectedSubject!.toLowerCase();
 
-        final matchesGrade =
-            selectedGrade == null ||
-            student.grade.toLowerCase() == selectedGrade!.toLowerCase();
-
-        return matchesSearch && matchesGender && matchesGrade;
+        return matchesSearch && matchesSubject;
       }).toList();
 
-      filtersActive = selectedGender != null || selectedGrade != null;
+      filtersActive = selectedSubject != null;
     });
   }
 
-  void _applyFilters(String? gender, String? grade) {
+  void _applyFilter(String? subject) {
     setState(() {
-      selectedGender = gender;
-      selectedGrade = grade;
-      _filterStudents();
+      selectedSubject = subject;
+      _filterTeachers();
     });
   }
 
   void _clearFilters() {
     setState(() {
-      selectedGender = null;
-      selectedGrade = null;
+      selectedSubject = null;
       filtersActive = false;
-      _filterStudents();
+      _filterTeachers();
     });
   }
 
@@ -292,7 +135,7 @@ class _StudentManagementScreenState extends State<StudentManagementScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Student Management'),
+        title: const Text('Teacher Management'),
         backgroundColor: AppPalette.backgroundColor,
         actions: [
           IconButton(
@@ -317,7 +160,7 @@ class _StudentManagementScreenState extends State<StudentManagementScreen> {
                     child: TextField(
                       controller: _searchController,
                       decoration: InputDecoration(
-                        hintText: 'Search by name, ID, class...',
+                        hintText: 'Search by name, ID, subject...',
                         border: InputBorder.none,
                         prefixIcon: Icon(Icons.search, color: Colors.grey[600]),
                         contentPadding: const EdgeInsets.symmetric(
@@ -366,25 +209,27 @@ class _StudentManagementScreenState extends State<StudentManagementScreen> {
             ),
             const SizedBox(height: 16),
 
-            // Student count
+            // Teacher count
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 4.0),
               child: Row(
                 children: [
                   Text(
-                    '${filteredStudents.length} Students',
-                    style: Theme.of(
-                      context,
-                    ).textTheme.bodySmall?.copyWith(color: Colors.grey[600]),
+                    '${filteredTeachers.length} Teachers',
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14,
+                      color: AppPalette.textPrimaryColor,
+                    ),
                   ),
                 ],
               ),
             ),
             const SizedBox(height: 8),
 
-            // Student list
+            // Teacher list
             Expanded(
-              child: filteredStudents.isEmpty
+              child: filteredTeachers.isEmpty
                   ? _buildEmptyState()
                   : SingleChildScrollView(
                       scrollDirection: Axis.vertical,
@@ -398,9 +243,9 @@ class _StudentManagementScreenState extends State<StudentManagementScreen> {
                           columns: [
                             DataColumn(
                               label: SizedBox(
-                                width: 120,
+                                width: 100,
                                 child: Text(
-                                  'Student ID',
+                                  'Teacher ID',
                                   style: TextStyle(fontWeight: FontWeight.bold),
                                 ),
                               ),
@@ -416,18 +261,9 @@ class _StudentManagementScreenState extends State<StudentManagementScreen> {
                             ),
                             DataColumn(
                               label: SizedBox(
-                                width: 100,
+                                width: 150,
                                 child: Text(
-                                  'Gender',
-                                  style: TextStyle(fontWeight: FontWeight.bold),
-                                ),
-                              ),
-                            ),
-                            DataColumn(
-                              label: SizedBox(
-                                width: 100,
-                                child: Text(
-                                  'Class',
+                                  'Subject',
                                   style: TextStyle(fontWeight: FontWeight.bold),
                                 ),
                               ),
@@ -451,14 +287,14 @@ class _StudentManagementScreenState extends State<StudentManagementScreen> {
                               ),
                             ),
                           ],
-                          rows: filteredStudents.map((student) {
+                          rows: filteredTeachers.map((teacher) {
                             return DataRow(
                               cells: [
                                 DataCell(
                                   SizedBox(
-                                    width: 120,
+                                    width: 100,
                                     child: Text(
-                                      student.id,
+                                      teacher.id,
                                       style: TextStyle(
                                         color: AppPalette.textPrimaryColor,
                                       ),
@@ -469,7 +305,7 @@ class _StudentManagementScreenState extends State<StudentManagementScreen> {
                                   SizedBox(
                                     width: 150,
                                     child: Text(
-                                      student.name,
+                                      teacher.name,
                                       style: TextStyle(
                                         color: AppPalette.textPrimaryColor,
                                       ),
@@ -478,41 +314,20 @@ class _StudentManagementScreenState extends State<StudentManagementScreen> {
                                 ),
                                 DataCell(
                                   SizedBox(
-                                    width: 100,
+                                    width: 150,
                                     child: Container(
                                       padding: EdgeInsets.symmetric(
                                         horizontal: 8,
                                         vertical: 4,
                                       ),
                                       decoration: BoxDecoration(
-                                        color: student.gender == 'Male'
-                                            ? Colors.blue.withOpacity(0.2)
-                                            : Colors.pink.withOpacity(0.2),
-                                        borderRadius: BorderRadius.circular(12),
-                                      ),
-                                      child: Text(
-                                        student.gender,
-                                        style: TextStyle(
-                                          color: AppPalette.textPrimaryColor,
+                                        color: _getSubjectColor(
+                                          teacher.subject,
                                         ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                DataCell(
-                                  SizedBox(
-                                    width: 100,
-                                    child: Container(
-                                      padding: EdgeInsets.symmetric(
-                                        horizontal: 8,
-                                        vertical: 4,
-                                      ),
-                                      decoration: BoxDecoration(
-                                        color: _getGradeColor(student.grade),
                                         borderRadius: BorderRadius.circular(12),
                                       ),
                                       child: Text(
-                                        student.grade,
+                                        teacher.subject,
                                         style: TextStyle(color: Colors.white),
                                       ),
                                     ),
@@ -522,7 +337,7 @@ class _StudentManagementScreenState extends State<StudentManagementScreen> {
                                   SizedBox(
                                     width: 200,
                                     child: Text(
-                                      student.email,
+                                      teacher.email,
                                       style: TextStyle(
                                         color: AppPalette.textPrimaryColor,
                                       ),
@@ -542,7 +357,7 @@ class _StudentManagementScreenState extends State<StudentManagementScreen> {
                                             size: 20,
                                           ),
                                           onPressed: () =>
-                                              _viewStudent(student),
+                                              _viewTeacher(teacher),
                                           splashRadius: 30,
                                           padding: EdgeInsets.zero,
                                           constraints: BoxConstraints(),
@@ -551,7 +366,7 @@ class _StudentManagementScreenState extends State<StudentManagementScreen> {
                                         IconButton(
                                           icon: Icon(Icons.edit, size: 20),
                                           onPressed: () =>
-                                              _editStudent(student),
+                                              _editTeacher(teacher),
                                           splashRadius: 30,
                                           padding: EdgeInsets.zero,
                                           constraints: BoxConstraints(),
@@ -564,7 +379,7 @@ class _StudentManagementScreenState extends State<StudentManagementScreen> {
                                             color: Colors.red,
                                           ),
                                           onPressed: () =>
-                                              _deleteStudent(student),
+                                              _deleteTeacher(teacher),
                                           splashRadius: 30,
                                           padding: EdgeInsets.zero,
                                           constraints: BoxConstraints(),
@@ -585,8 +400,7 @@ class _StudentManagementScreenState extends State<StudentManagementScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // Add new student
-          showAddStudentDialog();
+          showAddTeacherDialog();
         },
         backgroundColor: AppPalette.primaryColor,
         child: const Icon(Icons.add, color: Colors.white),
@@ -599,10 +413,10 @@ class _StudentManagementScreenState extends State<StudentManagementScreen> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(Icons.school, size: 64, color: Colors.grey[400]),
+          Icon(Icons.person, size: 64, color: Colors.grey[400]),
           const SizedBox(height: 16),
           Text(
-            'No students found',
+            'No teachers found',
             style: Theme.of(
               context,
             ).textTheme.titleMedium?.copyWith(color: Colors.grey[600]),
@@ -611,7 +425,7 @@ class _StudentManagementScreenState extends State<StudentManagementScreen> {
           Text(
             filtersActive
                 ? 'Try adjusting your filters'
-                : 'Add new students to get started',
+                : 'Add new teachers to get started',
             style: Theme.of(
               context,
             ).textTheme.bodyMedium?.copyWith(color: Colors.grey[500]),
@@ -639,15 +453,15 @@ class _StudentManagementScreenState extends State<StudentManagementScreen> {
         return StatefulBuilder(
           builder: (context, setState) {
             return AlertDialog(
-              title: const Text('Filter Students'),
+              title: const Text('Filter Teachers'),
               content: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  // Gender Filter
+                  // Subject Filter
                   const Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      'Gender',
+                      'Subject',
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                   ),
@@ -657,69 +471,26 @@ class _StudentManagementScreenState extends State<StudentManagementScreen> {
                     children: [
                       FilterChip(
                         label: const Text('All'),
-                        selected: selectedGender == null,
+                        selected: selectedSubject == null,
                         onSelected: (selected) {
                           setState(() {
-                            selectedGender = selected ? null : selectedGender;
+                            selectedSubject = selected ? null : selectedSubject;
                           });
                         },
                       ),
-                      FilterChip(
-                        label: const Text('Male'),
-                        selected: selectedGender == 'Male',
-                        onSelected: (selected) {
-                          setState(() {
-                            selectedGender = selected ? 'Male' : null;
-                          });
+                      ...teachers.map((teacher) => teacher.subject).toSet().map(
+                        (subject) {
+                          return FilterChip(
+                            label: Text(subject),
+                            selected: selectedSubject == subject,
+                            onSelected: (selected) {
+                              setState(() {
+                                selectedSubject = selected ? subject : null;
+                              });
+                            },
+                          );
                         },
-                      ),
-                      FilterChip(
-                        label: const Text('Female'),
-                        selected: selectedGender == 'Female',
-                        onSelected: (selected) {
-                          setState(() {
-                            selectedGender = selected ? 'Female' : null;
-                          });
-                        },
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 16),
-
-                  // Class Filter
-                  const Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      'Class',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                  const SizedBox(height: 8),
-                  Wrap(
-                    spacing: 8,
-                    children: [
-                      FilterChip(
-                        label: const Text('All'),
-                        selected: selectedGrade == null,
-                        onSelected: (selected) {
-                          setState(() {
-                            selectedGrade = selected ? null : selectedGrade;
-                          });
-                        },
-                      ),
-                      ...['Grade 9', 'Grade 10', 'Grade 11', 'Grade 12'].map((
-                        grade,
-                      ) {
-                        return FilterChip(
-                          label: Text(grade),
-                          selected: selectedGrade == grade,
-                          onSelected: (selected) {
-                            setState(() {
-                              selectedGrade = selected ? grade : null;
-                            });
-                          },
-                        );
-                      }).toList(),
+                      ).toList(),
                     ],
                   ),
                 ],
@@ -731,7 +502,7 @@ class _StudentManagementScreenState extends State<StudentManagementScreen> {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    _applyFilters(selectedGender, selectedGrade);
+                    _applyFilter(selectedSubject);
                     Navigator.pop(context);
                   },
                   child: const Text('Apply Filters'),
@@ -744,35 +515,37 @@ class _StudentManagementScreenState extends State<StudentManagementScreen> {
     );
   }
 
-  Color _getGradeColor(String grade) {
-    switch (grade) {
-      case 'Grade 9':
-        return Colors.blue;
-      case 'Grade 10':
-        return Colors.green;
-      case 'Grade 11':
-        return Colors.orange;
-      case 'Grade 12':
-        return Colors.purple;
-      default:
-        return Colors.grey;
-    }
+  Color _getSubjectColor(String subject) {
+    // Assign colors based on subject
+    final colors = {
+      'Mathematics': Colors.blue,
+      'Science': Colors.green,
+      'English': Colors.orange,
+      'History': Colors.purple,
+      'Art': Colors.pink,
+      'Physical Education': Colors.red,
+      'Music': Colors.teal,
+      'Computer Science': Colors.indigo,
+      'Foreign Languages': Colors.amber,
+      'Social Studies': Colors.brown,
+    };
+    return colors[subject] ?? Colors.grey;
   }
 
-  void _viewStudent(Student student) {
-    Get.toNamed(RouteName.studentDetailScreen, arguments: student);
+  void _viewTeacher(Teacher teacher) {
+    Get.toNamed(RouteName.teacherDetailScreen, arguments: teacher);
   }
 
-  void _editStudent(Student student) {
-    // Implement edit student
+  void _editTeacher(Teacher teacher) {
+    // Implement edit teacher
   }
 
-  void _deleteStudent(Student student) {
+  void _deleteTeacher(Teacher teacher) {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Delete Student'),
-        content: Text('Are you sure you want to delete ${student.name}?'),
+        title: const Text('Delete Teacher'),
+        content: Text('Are you sure you want to delete ${teacher.name}?'),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
@@ -781,12 +554,12 @@ class _StudentManagementScreenState extends State<StudentManagementScreen> {
           TextButton(
             onPressed: () {
               setState(() {
-                students.remove(student);
-                filteredStudents.remove(student);
+                teachers.remove(teacher);
+                filteredTeachers.remove(teacher);
               });
               Navigator.pop(context);
               ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text('Deleted ${student.name}')),
+                SnackBar(content: Text('Deleted ${teacher.name}')),
               );
             },
             child: const Text('Delete', style: TextStyle(color: Colors.red)),

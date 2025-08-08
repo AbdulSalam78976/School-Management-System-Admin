@@ -26,7 +26,7 @@ class CustomDrawerData {
       title: "Teacher",
       icon: "assets/images/teacher.png",
       onTap: () {
-        // Navigate to settings when implemented
+        Get.toNamed(RouteName.teacherManagementScreen);
       },
       isActive: false,
     ),
@@ -34,20 +34,20 @@ class CustomDrawerData {
       title: "Classes",
       icon: "assets/images/classes.png",
       onTap: () {
-        // Navigate to settings when implemented
+        Get.toNamed(RouteName.classManagementScreen);
       },
 
       isActive: false,
     ),
     DrawerModel(
-      title: "Chats",
-      icon: "assets/images/chat.png",
+      title: "Attendance",
+      icon: "assets/images/attendance.png",
       onTap: () {
-        // Navigate to settings when implemented
+        //Get.toNamed(RouteName.classManagementScreen);
       },
+
       isActive: false,
     ),
-
     DrawerModel(
       title: "Event & Notices",
       icon: "assets/images/megaphone.png",
@@ -57,10 +57,11 @@ class CustomDrawerData {
       isActive: false,
     ),
     DrawerModel(
-      title: "Fee Managemnt",
+      title: "Fee Management",
       icon: "assets/images/fees.png",
       onTap: () {
-        // Navigate to settings when implemented
+        // Navigate to fee management screen
+        Get.toNamed(RouteName.feeManagementScreen);
       },
       isActive: false,
     ),

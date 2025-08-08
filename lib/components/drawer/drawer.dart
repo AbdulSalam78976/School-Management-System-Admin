@@ -74,7 +74,7 @@ class CustomDrawer extends StatelessWidget {
                             style: GoogleFonts.nunito(
                               fontWeight: FontWeight.bold,
                               color: isActive ? Colors.white : Colors.grey,
-                              fontSize: 16,
+                              fontSize: isActive ? 18 : 16,
                             ),
                           ),
                         ],
